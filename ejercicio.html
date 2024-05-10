@@ -53,7 +53,7 @@
       });
 
       $( "#buscarCanton" ).click(function(){
-      var canton = $("#cantonInput").val()
+      var canton = document.getElementById("cantonInput").value;
       var url = 'http://127.0.0.1:5984/instituciones/_design/primero/_view/vista001?key="'+ canton +'"&include_docs=true';
       $.ajax({
         dataType: 'json',url
@@ -73,7 +73,7 @@
       });
 
       $( "#buscarLimite" ).click(function(){
-      var limite = $("#limiteInput").val()
+      var limite = document.getElementById("limiteInput").value;
       $.ajax({
         dataType: 'json',
         url: "http://127.0.0.1:5984/instituciones/_design/primero/_view/vista001?include_docs=true"
